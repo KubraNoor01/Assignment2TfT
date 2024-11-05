@@ -10,7 +10,7 @@ let items = [
     { id: 2, name: "BadAss habbits", description: "xyz"}
 ];
 
-// Create 
+// create 
 app.post('/items', (req, res) => {
     const newItem = req.body;
     newItem.id = items.length + 1; 
@@ -18,11 +18,10 @@ app.post('/items', (req, res) => {
     res.status(201).json(newItem); 
 });
 
-// Read 
+// read 
 app.get('/items', (req, res) => {
     res.json(items); 
 });
-
 
 app.get('/items/:id', (req, res) => {
     const item = items.find(i => i.id === parseInt(req.params.id));
@@ -30,7 +29,12 @@ app.get('/items/:id', (req, res) => {
     res.json(item); 
 });
 
+// update: doing stuck somewhere , i am not getting 
+// who i will i update after finding the item suppose 
+// i find the book with the help of id but
+// (sir , i will complete it soon IA)
 
+//delete
 
 
 
