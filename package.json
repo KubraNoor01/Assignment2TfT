@@ -1,0 +1,16 @@
+{
+  "name": "assignment2tft",
+  "version": "1.0.0",
+  "description": "This assignment is to build a simple Express.js application that performs  CRUD (Create, Read, Update, Delete) operations using body and query parameters.\r Express.js CRUD Assignment\r Objective: The goal of this assignment is to build a simple Express.js application that performs\r CRUD (Create, Read, Update, Delete) operations using body and query parameters. The\r operations will interact with an array of objects representing data (e.g., a list of books) to help\r students practice Express.js fundamentals.\r Instructions:\r 1. Setup:\r o Create a new Node.js project.\r o Install the necessary dependency: express.\r 2. Create an Express Server:\r o Set up an Express server with the necessary middleware (express.json()) to\r handle JSON data.\r 3. CRUD Operations:\r o Create (POST):\r  Implement a route POST /items that adds a new item to the array.\r  The new item should be sent in the request body as JSON.\r o Read (GET):\r  Implement a route GET /items to return all items from the array.\r  Implement a route GET /items/:id to return a single item by ID.\r  Implement a route GET /items/search that allows searching items using\r query parameters (e.g., /items/search?name=example).\r o Update (PUT):\r  Implement a route PUT /items/:id to update an existing item in the\r array.\r  The updated data should be sent in the request body.\r o Delete (DELETE):\r  Implement a route DELETE /items/:id to remove an item from the array.\r 4. Data Structure:\r o Use an array of objects to store the items. Example structure:\r let items = [\r  { id: 1, name: \"Book 1\", description: \"This is the first book.\"\r },\r  { id: 2, name: \"Book 2\", description: \"This is the second\r book.\" }\r ];\r Example Routes:\r  POST /items\r  GET /items\r  GET /items/:id\r  GET /items/search?name=example\r  PUT /items/:id\r  DELETE /items/:id\r Submission:\r  Submit the complete project folder, including the initial array data in your code On\r Github.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}

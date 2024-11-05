@@ -18,6 +18,21 @@ app.post('/items', (req, res) => {
     res.status(201).json(newItem); 
 });
 
+// Read 
+app.get('/items', (req, res) => {
+    res.json(items); 
+});
+
+
+app.get('/items/:id', (req, res) => {
+    const item = items.find(i => i.id === parseInt(req.params.id));
+    if (!item) return res.status(404).send('Item not found');
+    res.json(item); 
+});
+
+
+
+
 
 
 app.listen(PORT, () => {
