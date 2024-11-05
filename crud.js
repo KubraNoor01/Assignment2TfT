@@ -10,6 +10,16 @@ let items = [
     { id: 2, name: "BadAss habbits", description: "xyz"}
 ];
 
+// Create 
+app.post('/items', (req, res) => {
+    const newItem = req.body;
+    newItem.id = items.length + 1; 
+    items.push(newItem);
+    res.status(201).json(newItem); 
+});
+
+
+
 app.listen(PORT, () => {
     console.log("server is listening the port");
 });
